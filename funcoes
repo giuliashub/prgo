@@ -1,0 +1,45 @@
+/// funções
+
+#include <stdio.h>
+#include <math.h>
+
+////// se a funçao nao retorna valor, ela começa como void --> volta printf
+
+float divisao(float n1, float n2) ////// PRECISA DO PARENTESES, avisar o cmpilador antes --> a função n vai na main
+{ 
+float divi = n1/n2;
+return(divi);
+}
+
+
+int main()
+{
+float m1, m2; //// se a função chama int, a variavel que vai entrar nele tem que ser int
+printf("escreva dois numeros");
+scanf("%f %f", &m1, &m2);
+
+printf("A divisao tera resultado de %f \n", divisao(m1,m2));
+
+}
+
+
+/////// RECURSIVIDADE
+
+///// é chamar uma função varias vezes ate ela atender a uma certa condição
+
+int fatorial(int n)
+{
+if (n==0)
+{ return 1;} 
+else
+{ return (n * fatorial(n-1));   } /////// essa é a recursividade
+}
+
+
+
+
+
+
+
+
+

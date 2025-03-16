@@ -93,6 +93,7 @@ return 0;
 #include <stdio.h>
 float vol(float h, float r)
 {
+float v;
 v = 3.14*r*r / h ;
 return(v);
 }
@@ -116,6 +117,7 @@ return 0;
 #include <stdio.h>
 float volesf(float raio)
 {
+float v;
 v = 4*pi*r*r*r /3;
 return(v);
 }
@@ -136,6 +138,7 @@ return 0;
 #include <stdio.h>
 void imc(float h, float w)
 {
+float ind;
 ind = w / h*h ;
 printf("O IMC corporal sera de %f", ind);
 }

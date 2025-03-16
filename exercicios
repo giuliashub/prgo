@@ -4,6 +4,21 @@
 
 #include <stdio.h>
 
-float (maior)
+float maior(v1, v2)
 {
-if 
+if (v1 > v2)
+{ return (v1);}
+
+else
+{ return(v2); }
+}
+
+int main()
+{
+float n1,n2;
+printf("Escreva dois numeros: \n\n");
+scanf("%f%f", &n1, &n2);
+printf("O maior numero sera %f: \n" , maior(n1,n2));
+return 0;
+}
+

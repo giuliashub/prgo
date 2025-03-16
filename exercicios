@@ -1,1 +1,9 @@
+//// EXERCICIO 1 
 
+/////Escreva uma função que receba dois números e retorne o maior deles (com retorno de valor e sem retorno de valor).
+
+#include <stdio.h>
+
+float (maior)
+{
+if 

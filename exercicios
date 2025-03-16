@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-float maior(v1, v2)
+float maior(float v1, float v2) /////// RETORNO DE VALOR
 {
 if (v1 > v2)
 { return (v1);}
@@ -13,12 +13,150 @@ else
 { return(v2); }
 }
 
+
+void higher(float v1, float v2) ///////SEM RETORNO 
+{
+if (v1 > v2)
+{ printf("O maior numero sera %f: \n" , v1);}
+
+
+else
+{ printf("O maior numero sera %f: \n" , v2); }
+}
+
 int main()
 {
 float n1,n2;
 printf("Escreva dois numeros: \n\n");
 scanf("%f%f", &n1, &n2);
-printf("O maior numero sera %f: \n" , maior(n1,n2));
+printf("O maior numero sera %f: \n" , maior(n1,n2)); ///// RETORNO
+higher(n1,n2);  /// SEM RETORNO
 return 0;
 }
+
+
+
+\\\\\\\ exercicio 2
+
+
+\\\  Faça uma função que receba um número inteiro de 1 a 12 e imprima em tela o mês e a sua quantidade de dias de acordo com o número digitado pelo usuário.
+
+#include <stdio.h>
+
+void mes(int num)
+{
+int n;
+n = num - 1;
+const char *v[] = { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" };
+int d[] = { 31, 28, 31, 30, 31, 30, 30, 31, 30, 31, 30, 31 };
+
+printf("O mês de %s tem %d dias", v[n], d[n]);
+}
+
+int main()
+{
+int ind;
+printf("Insira um numero de 1 a 12");
+scanf("%d", &ind);
+mes(ind);
+
+return 0;
+}
+
+
+\\\\ exercicio 3
+
+\\\\\ Escreva uma função que receba uma temperatura em graus Fahrenheit e a retorne convertida em graus Celsius. 
+
+#include <stdio.h>
+float cel(float num)
+{
+float graus;
+graus = (num - 32) / (5.0/9.0) ;
+return(graus);
+}
+
+
+int main()
+{
+float far;
+printf("Escreva a temperatura em farenheit: \n\n");
+scanf("%f", &far);
+printf("A temperatura equivalente em celsius sera de %f graus", cel(far)); 
+return 0;
+}
+
+\\\\\\ EXERCICIO 4
+
+\\\\ Escreva uma função que receba a altura e o raio de um cilindro circular e retorne volume desse cilindro.
+
+#include <stdio.h>
+float vol(float h, float r)
+{
+v = 3.14*r*r / h ;
+return(v);
+}
+
+
+int main()
+{
+float alt, raio;
+printf("Insira a altura do cilindro: \n\n");
+scanf("%f", &alt);
+printf("Insira o raio do cilindro: \n \n");
+scanf("%f", &raio);
+printf("O volume do cilindro sera", vol(alt, raio)); 
+return 0;
+}
+
+\\\\ EXERCICIO 5
+
+\\\\ Escreva uma função para o cálculo do volume de uma esfera.
+
+#include <stdio.h>
+float volesf(float raio)
+{
+v = 4*pi*r*r*r /3;
+return(v);
+}
+
+int main()
+{
+float r;
+printf("Insira o raio da esfera: \n\n");
+scanf( "%f", &r);
+printf("O volume da esfera sera %f \n" , volesf(r));
+return 0;
+}
+
+\\\\ EXERCICIO 6
+
+\\\Calcule e retorne o IMC (Índice de Massa Corporal) dessa pessoa:
+
+#include <stdio.h>
+void imc(float h, float w)
+{
+ind = w / h*h ;
+printf("O IMC corporal sera de %f", ind);
+}
+
+int main()
+{
+int alt, peso;
+printf(" Insira sua altura: \n");
+scanf("%f", &alt);
+printf(" Insira seu peso: \n");
+scanf("%f", &peso);
+imc(alt, peso);
+return 0;
+}
+
+
+
+
+
+
+
+
+
 

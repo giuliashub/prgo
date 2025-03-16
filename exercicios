@@ -106,7 +106,7 @@ printf("Insira a altura do cilindro: \n\n");
 scanf("%f", &alt);
 printf("Insira o raio do cilindro: \n \n");
 scanf("%f", &raio);
-printf("O volume do cilindro sera", vol(alt, raio)); 
+printf("O volume do cilindro sera %f", vol(alt, raio)); 
 return 0;
 }
 
@@ -115,19 +115,20 @@ return 0;
 \\\\ Escreva uma função para o cálculo do volume de uma esfera.
 
 #include <stdio.h>
-float volesf(float raio)
+#include <math.h>
+float volesf(float r)
 {
 float v;
-v = 4*pi*r*r*r /3;
+v = 4*M_PI*r*r*r /3;
 return(v);
 }
 
 int main()
 {
-float r;
+float raio;
 printf("Insira o raio da esfera: \n\n");
-scanf( "%f", &r);
-printf("O volume da esfera sera %f \n" , volesf(r));
+scanf( "%f", &raio);
+printf("O volume da esfera sera %f \n" , volesf(raio));
 return 0;
 }
 
@@ -139,13 +140,13 @@ return 0;
 void imc(float h, float w)
 {
 float ind;
-ind = w / h*h ;
+ind = w / (h*h) ;
 printf("O IMC corporal sera de %f", ind);
 }
 
 int main()
 {
-int alt, peso;
+float alt, peso;
 printf(" Insira sua altura: \n");
 scanf("%f", &alt);
 printf(" Insira seu peso: \n");

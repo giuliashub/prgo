@@ -248,10 +248,44 @@ return 0;
 }
 
 
+///// EXERCICIO 10
 
+/// Escreva uma função que receba dois valores numéricos e um símbolo. Esse símbolo representará a operação que se deseja efetuar com os números.
 
+#include <stdio.h>
 
+float op( float a, float b, char c)
+{
+float res;
+if ( c == '+' )
+{ res = a + b; }
 
+else if ( c == '-')
+{ res = a - b ; }
+
+else if( c == '/')
+{ res = a/b ; }
+
+else if (c == '*')
+{ res = a*b; }
+
+return(res);
+
+}
+
+int main()
+
+{
+    float n1, n2;
+    char c1;
+    printf("Escreva dois numeros \n");
+    scanf("%f%f", &n1, &n2);
+    printf("Digite o simbolo + para adicao, - para subtracao, / para divisao ou * para multiplicacao \n");
+    scanf(" %c", &c1);
+    printf("O resultado da operacao entre %f e %f sera %f \n", n1, n2, op(n1,n2,c1));
+    return 0;
+      
+}
 
 
 

@@ -158,6 +158,100 @@ return 0;
 
 
 
+\\\\\\\\\\ exercicio 7
+
+\\\\Elabore uma função que receba três números inteiros, representando horas, minutos e segundo. A função deve retornar esse horário convertido em segundos.
+
+#include <stdio.h>
+
+int seconds(int h, int m, int s)
+{
+int seg;
+seg = h*360 + m*60 + s;
+
+return (seg);
+}
+
+int main()
+{
+int hrs, min, sec;
+printf("Insira o total de horas \n");
+scanf("%d", &hrs);
+printf("Insira o total de minutos \n");
+scanf("%d", &min);
+printf("Insira o total de segundos \n");
+scanf("%d", &sec);
+printf("A soma dos valores resulta em %d segundos", seconds(hrs, min, sec));
+return 0;
+}
+
+\\\\\\\\\ exercicio 8
+
+\\\\\\\\\\\Elabore uma função para verificar se um número é um quadrado perfeito. Um quadrado perfeito é um número inteiro não negativo que pode ser expresso como o quadrado de outro número inteiro. 
+
+#include <stdio.h>
+#include <math.h>
+
+void qp(int num)
+{
+int n;
+n = sqrt(num);
+if (num == n*n)
+{ printf("O numero e um quadrado perfeito \n "); }
+else
+{ printf("O numero nao e um quadrado perfeito \n"); }
+
+}
+
+int main()
+{
+int m;
+printf("digite um numero: \n");
+scanf("%d", &m);
+qp(m);
+return 0;
+}
+
+\\\\\\\\\ exercicio 9
+
+\\\\\\\\\\\ Elabore uma função que receba três notas de um aluno como parâmetros e uma letra. Se a letra for “A”, a função deverá calcular a média aritmética das notas do aluno; se for “P”, deverá calcular a média ponderada, com pesos 5, 3 e 2. Retorne
+a média calculada para o programa principal.
+
+#include <stdio.h>
+
+
+void media( float n1, float n2, float n3, char c)
+{
+float ma, mp;
+if ( c == 'A')
+{ 
+ma = (n1 + n2 + n3) / 3;
+printf("A media aritimetica sera %f \n", ma);
+}
+else if ( c == 'P' )
+{
+mp = ( n1*5 + n2*3 + n3 * 2 ) /10;
+printf("A media ponderada sera %f \n", mp);
+}
+}
+
+int main()
+{
+float m1, m2, m3;
+char c1;
+printf("Digite as 3 notas: \n");
+scanf("%f%f%f", &m1, &m2, &m3);
+printf("Digite A para media aritimetica ou P para ponderada \n");
+scanf(" %c", &c1);
+media(m1,m2,m3,c1);
+return 0;
+}
+
+
+
+
+
+
 
 
 

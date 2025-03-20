@@ -35,8 +35,28 @@ else
 { return (n * fatorial(n-1));   } /////// essa é a recursividade
 }
 
+\\\\\\ pra definir o idioma, usar:
 
+#include <locale.h>
 
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+}
+
+\\\\ LEMBRANDO de como funciona o laço for
+
+for(i=0; i < 3; i++)
+{
+printf("digite um numero", i);
+scanf("%d", &v[i]); ///// armazena os valores em um vetor
+}
+
+\\\\\ funco de potencia e raiz
+
+#include <math.h>
+
+s = sqrt(n); ///// raiz de n
+p = pow(n,2); //// potencia de n elevado a dois
 
 
 

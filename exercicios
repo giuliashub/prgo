@@ -376,5 +376,32 @@ int main()
 
 \\\\\\\\\\\ Escreva uma função que receba um número inteiro positivo e retorne o maior fator primo desse número.
 
+\\\\\\\ EXERCICIO 15
 
+\\\\\\\\\ EXERCICIO 16
+\\\\\\ . Faça uma função que receba um inteiro N como parâmetro. Calcule e retorne o
+resultado da seguinte série S:
+
+
+#include <stdio.h>
+
+float serie(float n)
+{
+	float divi = 0;
+	int i;
+	for(i=1; i<n; i++)
+	{
+		divi = ( ((i*i) + 1) / (i + 3) )+ divi ;
+	}
+	return(divi);
+}
+
+int main()
+{
+	float num;
+	printf("digite um numero \n");
+	scanf("%f", &num);
+	printf("O resultado sera %f", num);
+	return 0;
+}
 

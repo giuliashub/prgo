@@ -59,7 +59,42 @@ s = sqrt(n); ///// raiz de n
 p = pow(n,2); //// potencia de n elevado a dois
 
 
+\\\\\\\\ EXERICIO FUNCOES
+#include <stdio.h>
 
+void media(float n1, float n2)
+{
+	float m;
+	m = (n1+n2)/2;
+	
+	if (m>=9)
+	{
+		printf("Media final foi %f : Conceito A", m);
+	}
+	else if (m >= 7.5 && m < 9)
+	{
+		printf("Media final foi %f : Conceito B", m);
+	}
+	else if (m >= 5 && m < 7.5)
+	{
+		printf("Media final foi %f : Conceito C", m);
+	}
+	else if (m < 5)
+	{
+		printf("Media final foi %f : Conceito F", m);
+	}
+}
+
+int main()
+
+{
+	float a, b;
+	printf("Insira duas notas \n");
+	scanf("%f%f", &a, &b);
+	media(a,b);
+	return 0;
+}
+\\\\\\\\\\\\\\\\
 
 
 

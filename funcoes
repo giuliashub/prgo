@@ -96,7 +96,7 @@ int main()
 }
 \\\\\\\\\\\\\\\\ PONTEIROS
 
-\\\\\\ o ponteiro é usado pra indicar uma variavel
+\\\\\\ o ponteiro é usado pra devolver o conteudo da variavel apontada (*) ou o endereço de memoria (&)
 
 int *idade ; \\\\\ === o * é o ponteiro
 

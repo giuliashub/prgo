@@ -94,7 +94,11 @@ int main()
 	media(a,b);
 	return 0;
 }
-\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\ PONTEIROS
+
+\\\\\\ o ponteiro é usado pra indicar uma variavel
+
+int *idade ; \\\\\ === o * é o ponteiro
 
 
 

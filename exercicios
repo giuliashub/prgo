@@ -375,8 +375,58 @@ int main()
 \\\\\\\\\ EXERCICIO 14
 
 \\\\\\\\\\\ Escreva uma função que receba um número inteiro positivo e retorne o maior fator primo desse número.
+#include <stdio.h>
+#include <math.h>
+
+int primos(int n)
+{
+    int i;
+
+    int maior = 0;
+    for(i=3; i <= n*n ; i = i + 2)
+    {
+        while( n % i == 0 )
+        {
+            maior = i;
+            n /=i;
+        }
+    }
+  return (maior);
+    
+}
+int main()
+{
+    int num;
+    printf("digite um numero \n");
+    scanf("%d", &num);
+    printf("o maior divisor primo sera: %d", primos(num));
+    return 0;
+}
+
 
 \\\\\\\ EXERCICIO 15
+\\\\ Escreva uma função que receba um número inteiro positivo n. Calcule e retorne o seu fatorial n!: n! = n * ( – 1) * (n – 2) * ... * 1.
+#include <stdio.h>
+#include <math.h>
+
+int fatorial(int n)
+{
+    int sum = 1, i;
+    for(i=0; i<n; i++)
+    sum = sum * i + sum;
+    return sum;
+}
+
+int main()
+{
+    int a;
+    printf("digite um numero: \n");
+    scanf("%d", &a);
+    printf("o fatorial sera %d", fatorial(a));
+    return 0;
+}
+
+
 
 \\\\\\\\\ EXERCICIO 16
 \\\\\\ . Faça uma função que receba um inteiro N como parâmetro. Calcule e retorne o
@@ -389,7 +439,7 @@ float serie(float n)
 {
 	float divi = 0;
 	int i;
-	for(i=1; i<n; i++)
+	for(i=1; i<=n; i++)
 	{
 		divi = ( ((i*i) + 1) / (i + 3) )+ divi ;
 	}
@@ -401,7 +451,107 @@ int main()
 	float num;
 	printf("digite um numero \n");
 	scanf("%f", &num);
-	printf("O resultado sera %f", num);
+	printf("O resultado sera %f", serie(num));
 	return 0;
+}
+
+\\\\\\\\ EXERCICIO 17 (NAO TESTADO)
+\\\\\\\\\  Faça uma função que receba como parâmetro o valor de um ângulo em graus e calcule o valor do seno desse ângulo usando a sua respectiva série de Taylor
+#include <stdio.h>
+#include <math.h>
+
+long fat(int nat) {
+    if (nat == 0 || nat == 1) 
+        return 1;
+    return nat * fat(nat - 1);
+}
+
+float sen(float g)
+{
+    float n = g*M_PI/180.0;
+    int i;
+    float soma = 0;
+    for(i=0; i<5; i ++)
+    {
+        if (i%2 == 0)
+        soma = soma + pow(n, 2*i +1)/fat(2*i +1);
+        else
+        soma = soma - pow(n, 2*i +1)/fat(2*i +1);
+    }
+    return(soma);
+}
+int main()
+{
+    float num;
+    printf("digite um numero \n");
+    scanf("%f", &num);
+    printf("O valor do seno do angulo e %f", sen(num));
+    return 0;
+}
+
+
+\\\ EXERCICIO 18
+\\\Faça uma função que receba como parâmetro o valor de um ângulo em graus e calcule o valor do cosseno desse ângulo usando a sua respectiva série de Taylor:
+
+#include <stdio.h>
+#include <math.h>
+
+long fat(int nat) {
+    if (nat == 0 || nat == 1) 
+        return 1;
+    return nat * fat(nat - 1);
+}
+
+float coss(float g)
+{
+    float n = g*M_PI/180.0;
+    int i;
+    float soma = 0;
+    for(i=0; i<5; i ++)
+    {
+        if (i%2 == 0)
+        soma = soma + pow(n, 2*i)/fat(2*i);
+        else
+        soma = soma - pow(n, 2*i)/fat(2*i);
+    }
+    return(soma);
+}
+int main()
+{
+    float num;
+    printf("digite um numero \n");
+    scanf("%f", &num);
+    printf("O valor do cosseno do angulo e %f", coss(num));
+    return 0;
+}
+
+\\\\\\\\\ EXERCICIO 19
+\\\\\\\\\\\ Faça uma função que calcule e retorne o número neperiano e, e = 2,71828183.
+#include <stdio.h>
+#include <math.h>
+
+long fat(int nat) {
+    if (nat == 0 || nat == 1) 
+        return 1;
+    return nat * fat(nat - 1);
+}
+
+float neperio(int n)
+{
+    int i;
+    float e = 1;
+   for(i=1; i<=n; i++)
+   {
+       e = (1.0 / fat(i)) + e;
+   }
+   return(e);
+}
+int main()
+{
+    int num;
+    printf("digite um numero \n");
+    scanf("%d", &num);
+    printf("O numero neperiano para %d repeticoes sera: %f", num, neperio(num));
+    return 0;
 }
 

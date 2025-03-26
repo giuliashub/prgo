@@ -568,3 +568,202 @@ int main()
     return 0;
 }
 
+//////////////// LISTA RECURSIVIDADE
+
+\\\\\\\\ EXERCICIO 1: Escreva uma função recursiva que calcule a soma dos n primeiros cubos.
+
+#include <stdio.h>
+#include <math.h>
+
+long scubik(int n)
+
+{
+    int i;
+    
+    if(n == 1)
+    {
+    return 1;
+    }
+    else
+    {
+    return (pow(n, 3) + scubik(n-1));
+    }
+}
+
+int main()
+{
+    int num;
+    printf("digite um numero: \n");
+    scanf("%d", &num);
+    printf("A soma dos cubos dos %d primeiros numeros sera: %ld \n", num, scubik(num) );
+}
+
+
+\\\\\\ EXERCICIO 2: Crie uma função recursiva que receba um número inteiro N e retorne o somatório dos números de 1 a N.
+
+#include <stdio.h>
+#include <math.h>
+
+int soma(int n)
+
+{
+    
+    if(n == 1)
+    {
+    return 1;
+    }
+    else
+    {
+    return (n + soma(n-1));
+    }
+}
+
+int main()
+{
+    int num;
+    printf("digite um numero: \n");
+    scanf("%d", &num);
+    printf("A soma dos %d primeiros numeros sera: %d \n", num, soma(num) );
+}
+
+\\\\\\ EXERCICIO 3: Crie uma função recursiva que receba um número inteiro N e imprima todos os números naturais de 0 até N em ordem crescente.
+#include <stdio.h>
+#include <math.h>
+
+void print(int i, int n)
+
+{
+    if(i > n)
+    {
+    printf("\n");
+    }
+    else
+    {
+    printf("%d ", i);
+    print(i+1, n);
+    }
+}
+
+int main()
+{
+    int num;
+    printf("digite um numero: \n");
+    scanf("%d", &num);
+    print(1, num);
+}
+
+
+\\\\\\\ EXERCICIO 4:  Crie uma função recursiva que receba um número inteiro N e imprima todos os números naturais de 0 até N em ordem decrescente.
+#include <stdio.h>
+#include <math.h>
+
+void print(int n)
+
+{
+    
+    if(n == 0)
+    {
+    printf("\n");
+    }
+    else
+    {
+    printf("%d ", n);
+    print(n-1);
+    }
+}
+
+int main()
+{
+    int num;
+    printf("digite um numero: \n");
+    scanf("%d", &num);
+    print(num);
+}
+
+
+\\\\\\ EXERCICIO 5: Crie uma função recursiva que retorne a soma dos elementos de um vetor de inteiros.
+#include <stdio.h>
+#include <math.h>
+
+int sumvet(int i, int n, int vet[])
+
+{
+    if(i == n)
+    {
+    return 1;
+    }
+    else
+    {
+    return (vet[i] + sumvet(i+1, n, vet));
+    }
+}
+
+int main()
+{
+    int num, i;
+    printf("digite o tamanho do vetor: \n");
+    scanf("%d", &num);
+    int v[num];
+    printf("digite os %d elementos do vetor: \n", num);
+    for(i=0; i<num; i++)
+    {
+        scanf("%d", &v[i]);
+    }
+    printf("A soma vetorial sera: %d \n", sumvet(1, num, v));
+}
+
+
+\\\\\\ EXERCICO 6:  Crie uma função recursiva que retorne a média dos elementos de um vetor de inteiros.
+#include <stdio.h>
+#include <math.h>
+
+int sumvet(int i, int n, int vet[])
+
+{
+    if(i == n)
+    {
+    return 0;
+    }
+    else
+    {
+    return (vet[i] + sumvet(i+1, n, vet));
+    }
+
+}
+
+int main()
+{
+    int num, i;
+    printf("digite o tamanho do vetor: \n");
+    scanf("%d", &num);
+    int v[num];
+    printf("digite os %d elementos do vetor: \n", num);
+    for(i=0; i<num; i++)
+    {
+        scanf("%d", &v[i]);
+    }
+    float media = sumvet(0, num, v) / (float)num;
+    printf("A media sera: %f \n", media);
+}
+
+\\\\\\\ EXERCICIO 7: Escreva uma função recursiva que receba por parâmetro dois valores inteiros x e y e calcule e retorne o resultado de xy para o programa principal.
+#include <stdio.h>
+#include <math.h>
+
+int multi(int x, int y)
+{
+    if (y == 0)
+    return 1;
+    else
+    return (x*multi(x, y-1));
+}
+
+int main()
+{
+    int xis, yip;
+    printf("digite x: \n");
+    scanf("%d", &xis);
+        printf("digite y: \n");
+    scanf("%d", &yip);
+    printf("O resultado de x elevado a y sera: %d \n", multi(xis, yip));
+}

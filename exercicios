@@ -462,10 +462,14 @@ int main()
 
 long fat(int nat) {
     if (nat == 0 || nat == 1) 
+	{
         return 1;
-    return nat * fat(nat - 1);
+ 	}
+else
+	{
+	return nat * fat(nat - 1);
+	}
 }
-
 float sen(float g)
 {
     float n = g*M_PI/180.0;
@@ -498,8 +502,13 @@ int main()
 
 long fat(int nat) {
     if (nat == 0 || nat == 1) 
+	{
         return 1;
-    return nat * fat(nat - 1);
+ 	}
+else
+	{
+	return nat * fat(nat - 1);
+	}
 }
 
 float coss(float g)
@@ -532,10 +541,14 @@ int main()
 
 long fat(int nat) {
     if (nat == 0 || nat == 1) 
+	{
         return 1;
-    return nat * fat(nat - 1);
+ 	}
+else
+	{
+	return nat * fat(nat - 1);
+	}
 }
-
 float neperio(int n)
 {
     int i;

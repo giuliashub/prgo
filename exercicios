@@ -767,3 +767,90 @@ int main()
     scanf("%d", &yip);
     printf("O resultado de x elevado a y sera: %d \n", multi(xis, yip));
 }
+
+
+
+\\\\\\\ LISTA PONTEIROS
+
+\\\\\EX 1: Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba o maior endereço.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+int a = 2, b = 11;
+int *c, *d;
+
+c = &a;
+d = &b;
+
+	if ( c > d )
+	printf("O maior endereco sera do valor %d: 		%d", (*c) , c);
+	else
+	printf("O maior endereco sera do valor %d: 		%d", (*d), d);
+	
+return 0;
+}
+
+\\\\\ EX 2: Escreva um programa que contenha duas variáveis inteiras. Leia essas variáveis do teclado. Em seguida, compare seus endereços e exiba o
+\\ conteúdo do maior endereço.
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+int a, b;
+int *c, *d;
+
+c = &a;
+d = &b;
+
+printf("Insira dois valores: \n");
+scanf("%d%d", c, d);
+
+	if ( c > d )
+	printf("O conteudo do maior endereco %d sera: 		%d", c, (*c));
+	else
+	printf("O conteudo do maior endereco %d sera:  		%d", d, (*d));
+	
+return 0;
+}
+
+\\\\\\\ EX 3: Crie um programa que contenha um array de float com 10 elementos. Imprima o endereço de cada posição desse array.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	int i;
+	float v[10] = {1,2,3,4,5,6,7,8,9,10};
+	float *p;
+	p = &v[0];
+	
+		for(i=0; i<10; i++)
+		{
+			printf("O endereco do elemento %d sera:		%d \n", i+1, (p+i));
+		}
+
+}
+\\\\\ EX 4: Crie um programa que contenha uma matriz de float com três linhas e três colunas. Imprima o endereço de cada posição dessa matriz.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	int i, j;
+	float m[3][3] = {1,2,3, 1,2,3, 1,2,3};
+	float *p;
+	p = &m[0][0];
+	
+		for(i=0; i<3; i++)
+		{
+			for(j=0; j<3; j++)
+			printf("O endereco do elemento na posicao[%d][%d] sera:		%p \n", i+1, j+1, (p+i));
+		}
+
+}

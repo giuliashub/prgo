@@ -100,5 +100,21 @@ int main()
 
 int *idade ; \\\\\ === o * é o ponteiro
 
+\\\ int *p em byte 20 e valor 24
+\\ O ponteiro pode ser incrementado:
+\\ p++ == incrementa o endereço de bytes de memoria (int tem 2 bytes, ent vai pro byte 22)
+\\ (*p)++ == incremento do valor da variavel(24 vai para 25)
+\\*(p++) == incrementa o endereço de memoria e acessa o valor da variavel nele (procura quem esta no byte 22)
 
+\\\ SÓ PODE FAZER SUBTRAÇÃO E SO SE FOR EM INT
 
+Para ponteiros em vetores, teriamos:
+
+int m[5]= {1,2,3,4,5};
+int *p;
+p = m;
+printf("O elemento 2 sera: %d", *(p + 1)};  \\\ é o mesmo que:
+printf(""O elemento 2 sera: %d", m[1]};
+
+char s[] = "OiTudoBem";
+char *p1 = s; \\\ isso quer dizer que p1 aponta pro s[0], que é o caracter O;
